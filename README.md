@@ -46,11 +46,12 @@ sonar-scanner -Dsonar.token=$SONAR_TOKEN
 
 La configuración vive en `sonar-project.properties` y analiza solo `app`,
 `lib` y `hooks`; los componentes shadcn de proveedor quedan excluidos para
-que el reporte se enfoque en el código del ejercicio. El catálogo espera al
-menos 14 reglas distintas, incluyendo 1 Blocker (fallthrough), varios
-Critical (eval, ReDoS, complejidad cognitiva, var) y vulnerabilidades de
-credenciales y PRNG. Un defecto (XSS por `?campaign=`) no tiene regla directa
-en la edición Community: es el hallazgo sorpresa para discusión en sesión.
+que el reporte se enfoque en el código del ejercicio. El escaneo de
+referencia sobre SonarQube Community 26.9 reportó 23 issues (1 Blocker,
+6 Critical, 12 Major, 3 Minor, 1 Info) con 18 reglas distintas; el detalle
+por defecto está en el catálogo. Un defecto (XSS por `?campaign=`) no tiene
+regla directa en la edición Community: es el hallazgo sorpresa para
+discusión en sesión.
 
 ## Estructura
 
